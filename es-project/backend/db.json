@@ -1,0 +1,547 @@
+{
+  "service-definitions": [
+    {
+      "id": "sp",
+      "descr": "Substituir pneus",
+      "duração": 40
+    },
+    {
+      "id": "cr",
+      "descr": "Calibrar rodas",
+      "duração": 20
+    },
+    {
+      "id": "ad",
+      "descr": "Alinhar direção",
+      "duração": 30
+    },
+    {
+      "id": "sct",
+      "descr": "Subsituir calços travões",
+      "duração": 60
+    },
+    {
+      "id": "mot",
+      "descr": "Mudar óleo travões",
+      "duração": 20
+    },
+    {
+      "id": "li",
+      "descr": "Limpeza interior",
+      "duração": 120
+    },
+    {
+      "id": "le",
+      "descr": "Limpeza exterior",
+      "duração": 30
+    },
+    {
+      "id": "sfah",
+      "descr": "Substituir filtro ar habitáculo",
+      "duração": 30
+    },
+    {
+      "id": "mom",
+      "descr": "Mudar óleo motor",
+      "duração": 10
+    },
+    {
+      "id": "sfo",
+      "descr": "Substituir filtro óleo",
+      "duração": 20
+    },
+    {
+      "id": "sfc",
+      "descr": "Substituir filtro combustível",
+      "duração": 30
+    },
+    {
+      "id": "sfam",
+      "descr": "Substituir filtro ar motor",
+      "duração": 30
+    },
+    {
+      "id": "scc",
+      "descr": "Substituir conversor catalítico",
+      "duração": 30
+    },
+    {
+      "id": "sba",
+      "descr": "Substituir bateria de arranque",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de incandescência",
+      "duração": 30
+    },
+    {
+      "id": "sfp",
+      "descr": "Substituir filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "rfp",
+      "descr": "Regenerar filtro de partículas",
+      "duração": 30
+    },
+    {
+      "id": "sva",
+      "descr": "Substituir válvula do acelerador",
+      "duração": 30
+    },
+    {
+      "id": "svi",
+      "descr": "Substituir velas de ignição",
+      "duração": 30
+    },
+    {
+      "id": "adb",
+      "descr": "Avaliar desempenho da bateria",
+      "duração": 30
+    },
+    {
+      "id": "sb",
+      "descr": "Substituir bateria",
+      "duração": 20
+    }
+  ],
+  "vehicle-types": [
+    {
+      "id": "gasolina",
+      "serviços": [
+        "sba",
+        "sfc",
+        "mom",
+        "sfam",
+        "sfo",
+        "scc",
+        "sva",
+        "svi"
+      ]
+    },
+    {
+      "id": "gasoleo",
+      "serviços": [
+        "sba",
+        "sfp",
+        "sfc",
+        "mom",
+        "sfam",
+        "rfp",
+        "sfo",
+        "scc",
+        "svi"
+      ]
+    },
+    {
+      "id": "eletrico",
+      "serviços": [
+        "sb",
+        "adb"
+      ]
+    },
+    {
+      "id": "hibrido",
+      "serviços": [
+        "sba",
+        "adb",
+        "sfc",
+        "sb",
+        "mom",
+        "sfam",
+        "sfo",
+        "scc",
+        "sva",
+        "svi"
+      ]
+    },
+    {
+      "id": "universal",
+      "serviços": [
+        "le",
+        "mot",
+        "sp",
+        "cr",
+        "li",
+        "sct",
+        "sfah",
+        "ad"
+      ]
+    }
+  ],
+  "clients": [
+    {
+      "id": "123",
+      "nome": "João Silva",
+      "email": "js@imail.com",
+      "telefone": "912345678",
+      "image": "/diogo.png"
+    },
+    {
+      "id": "124",
+      "nome": "Maria Santos",
+      "email": "jms@imail.com",
+      "telefone": "912345679",
+      "image": "/diogo.png"
+    },
+    {
+      "id": "125",
+      "nome": "José Pereira",
+      "email": "jp@imail.com",
+      "telefone": "912345680",
+      "image": "/diogo.png"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "08-25-AA",
+      "marca": "Renault",
+      "clientId": "123",
+      "vehicle-typeId": "gasolina",
+      "cilindrada": 1000,
+      "kms": 200000,
+      "ocupado": false
+    },
+    {
+      "id": "AH-31-BB",
+      "marca": "BMW",
+      "clientId": "124",
+      "vehicle-typeId": "gasoleo",
+      "cilindrada": 2000,
+      "kms": 120000,
+      "ocupado": false
+    },
+    {
+      "id": "AH-32-44",
+      "marca": "Tesla",
+      "clientId": "123",
+      "vehicle-typeId": "eletrico",
+      "potencia": 200,
+      "kms": 20000,
+      "ocupado": false
+    },
+    {
+      "id": "AH-21-25",
+      "marca": "Toyota",
+      "clientId": "125",
+      "vehicle-typeId": "hibrido",
+      "cilindrada": 1000,
+      "potencia": 200,
+      "kms": 80000,
+      "ocupado": false
+    }
+  ],
+  "services": [
+    {
+      "id": "s31",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "sb",
+      "data-chegada": {
+        "dia": 10,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 15,
+        "minutos": 15
+      },
+      "estado": "parado",
+      "agendamento": "filaDeEspera",
+      "descrição": "não dá"
+    },
+    {
+      "id": "s32",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "li",
+      "data-chegada": {
+        "dia": 10,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 15,
+        "minutos": 0
+      },
+      "estado": "parado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 26,
+        "mes": 3,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "sdddd"
+    },
+    {
+      "id": "s33",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "le",
+      "data-chegada": {
+        "dia": 13,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 15,
+        "minutos": 15
+      },
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Ver jantes."
+    },
+    {
+      "id": "s34",
+      "vehicleId": "AH-21-25",
+      "service-definitionId": "sfc",
+      "data-chegada": {
+        "dia": 25,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Falta o filtro."
+    },
+    {
+      "id": "s12",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sp",
+      "data-chegada": {
+        "dia": 10,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 15,
+        "minutos": 15
+      },
+      "estado": "realizado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Colocar XPTO 225R15"
+    },
+    {
+      "id": "s24",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "li",
+      "data-chegada": {
+        "dia": 25,
+        "mes": 1,
+        "ano": 2024,
+        "hora": 17,
+        "minutos": 0
+      },
+      "estado": "realizado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 2,
+        "mes": 2,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 15
+      },
+      "descrição": "shampoo XPTO"
+    },
+    {
+      "id": "s35",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sfah",
+      "data-chegada": {
+        "dia": 5,
+        "mes": 4,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 30
+      },
+      "estado": "realizado",
+      "agendamento": "filaDeEspera",
+      "descrição": "cenas"
+    },
+    {
+      "id": "s36",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "ad",
+      "data-chegada": {
+        "dia": 12,
+        "mes": 4,
+        "ano": 2024,
+        "hora": 11,
+        "minutos": 0
+      },
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 15,
+        "mes": 4,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "descrição": "Alinhamento da direção necessário."
+    },
+    {
+      "id": "s38",
+      "vehicleId": "AH-21-25",
+      "service-definitionId": "sba",
+      "data-chegada": {
+        "dia": 28,
+        "mes": 4,
+        "ano": 2024,
+        "hora": 8,
+        "minutos": 30
+      },
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Substituição urgente da bateria."
+    },
+    {
+      "id": "s39",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "svi",
+      "data-chegada": {
+        "dia": 1,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 15
+      },
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Troca de velas de ignição."
+    },
+    {
+      "id": "s40",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "mom",
+      "data-chegada": {
+        "dia": 5,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 14,
+        "minutos": 0
+      },
+      "estado": "programado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 30,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 9,
+        "minutos": 30
+      },
+      "descrição": "Mudança de óleo do motor."
+    },
+    {
+      "id": "s41",
+      "vehicleId": "AH-32-44",
+      "service-definitionId": "le",
+      "data-chegada": {
+        "dia": 7,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 13,
+        "minutos": 45
+      },
+      "estado": "nafila",
+      "agendamento": "filaDeEspera",
+      "descrição": "Limpeza exterior, foco nas jantes."
+    },
+    {
+      "id": "s42",
+      "vehicleId": "AH-21-25",
+      "service-definitionId": "sfo",
+      "data-chegada": {
+        "dia": 15,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 16,
+        "minutos": 0
+      },
+      "estado": "parado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Substituição do filtro de óleo."
+    },
+    {
+      "id": "s43",
+      "vehicleId": "08-25-AA",
+      "service-definitionId": "sfc",
+      "data-chegada": {
+        "dia": 20,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 15,
+        "minutos": 30
+      },
+      "estado": "realizado",
+      "agendamento": "filaDeEspera",
+      "descrição": "Troca do filtro de combustível.",
+      "servicosExtra": [
+        "sb"
+      ]
+    },
+    {
+      "id": "s44",
+      "vehicleId": "AH-31-BB",
+      "service-definitionId": "sct",
+      "data-chegada": {
+        "dia": 25,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 10,
+        "minutos": 0
+      },
+      "estado": "realizado",
+      "agendamento": "programado",
+      "data": {
+        "dia": 30,
+        "mes": 5,
+        "ano": 2024,
+        "hora": 8,
+        "minutos": 30
+      },
+      "descrição": "Substituição dos calços dos travões."
+    }
+  ],
+  "mecanicos": [
+    {
+      "id": "123",
+      "password": "123",
+      "name": "Paula Carvalho",
+      "idade": 25,
+      "role": "eletrico",
+      "image": "/diogo.png",
+      "jobs": [
+        "s31",
+        "s32",
+        "s35",
+        "s44"
+      ]
+    },
+    {
+      "id": "kevinlove33",
+      "password": "password111",
+      "name": "Carlos Carvalho",
+      "idade": 30,
+      "role": "combustao",
+      "image": "/diogo.png",
+      "jobs": [
+        "s33",
+        "s24",
+        "s36",
+        "s38",
+        "s39",
+        "s42"
+      ]
+    },
+    {
+      "id": "manutebol33",
+      "password": "password333",
+      "name": "Julia Cardoso",
+      "idade": 35,
+      "role": "geral",
+      "image": "/diogo.png",
+      "jobs": [
+        "s34",
+        "s12",
+        "s40",
+        "s41",
+        "s43"
+      ]
+    }
+  ]
+}
